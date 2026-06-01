@@ -366,7 +366,7 @@ const menuItems = [
         tags: ['penguinmod'],
         featured: true
     },
-    {
+    /*{
         name: 'Tailgating',
         extensionId: 'jgTailgating',
         description: 'Have sprites & clones follow behind other sprites & clones by an offset, like RPG party members.',
@@ -382,7 +382,7 @@ const menuItems = [
         description: 'Place sprites on grids.',
         extDeveloper: 'SharkPool-SP',
         featured: true
-    },
+    },*/
     {
         name: 'Canvas Effects',
         extensionId: 'theshovelcanvaseffects',
@@ -412,15 +412,7 @@ const menuItems = [
         featured: true
     },
  
-    {
-        name: 'LZ Compress',
-        extensionId: 'shovellzcompresss',
-        iconURL: theshovelLzCompressIcon,
-        tags: ['penguinmod', 'datamgmt'],
-        description: 'Compress and decompress text using lz-string.',
-        extDeveloper: 'TheShovel',
-        featured: true
-    },
+    
     {
         name: 'Prism',
         extensionId: 'jgPrism',
@@ -437,6 +429,14 @@ const menuItems = [
         description: 'For logging and variable utilization.',
         featured: true,
         extDeveloper: 'silvxrcat'
+    },{
+        name: 'LZ Compress',
+        extensionId: 'shovellzcompresss',
+        iconURL: theshovelLzCompressIcon,
+        tags: ['penguinmod', 'datamgmt'],
+        description: 'Compress and decompress text using lz-string.',
+        extDeveloper: 'TheShovel',
+        featured: true
     },
     {
         name: 'HTML iframe Elements',
@@ -485,8 +485,7 @@ const menuItems = [
             />
         ),
         featured: true
-    }
-    };
+    },
     {
         name: 'micro:bit',
         extensionId: 'microbit',
