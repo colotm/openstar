@@ -941,11 +941,11 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const controlXML = moveCategory('control') || control(isInitialSetup, isStage, targetId);
     const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId);
     const soundXML = moveCategory('sound') || sound(isInitialSetup, isStage, targetId, soundName);
+    const liveTestsXML = moveCategory('liveTests') || liveTests(isLiveTest);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId);
     const listsXML = moveCategory('lists') || lists(isInitialSetup, isStage, targetId);
     const variablesXML = moveCategory('variables') || variables(isInitialSetup, isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
-    const liveTestsXML = moveCategory('liveTests') || liveTests(isLiveTest);
 
     const everything = [
         xmlOpen,
@@ -955,15 +955,14 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         controlXML,
         sensingXML,
         soundXML,
+        for (const extensionCategory of categoriesXML) {
+        everything.push(extensionCategory.xml),
+         if (isLiveTest) everything.push(liveTestsXML),
         operatorsXML,
         listsXML,
         variablesXML,
         myBlocksXML
     ];
-    if (isLiveTest) everything.push(liveTestsXML);
-
-    for (const extensionCategory of categoriesXML) {
-        everything.push(extensionCategory.xml);
     }
 
     everything.push(xmlClose);
